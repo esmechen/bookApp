@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "254951189206",
+    "firebase_url": "https://my-book-app-8413a.firebaseio.com",
+    "project_id": "my-book-app-8413a",
+    "storage_bucket": "my-book-app-8413a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254951189206:android:9c7bc6f12c6de9e1",
+        "android_client_info": {
+          "package_name": "com.example.collegebookapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcWLMx8AOyh99DL8Hk6WG4SAl3QvDQWh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254951189206-o7icv4bo26fdd8g5k73kefe6igqqtlm7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

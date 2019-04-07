@@ -2,4 +2,8 @@
     <string name="app_name">College Book App</string>
     <string name="title_myProfile">My Profile</string>
     <string name="title_discover">Discover</string>
+    <string name="register_now_button_text">Register Now</string>
+    <string name="sign_in_text_view">Already have an account? Sign in here</string>
+    <string name="register_user_password">Enter your password</string>
+    <string name="register_user_email">Enter your email</string>
 </resources>
