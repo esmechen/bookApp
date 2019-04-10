@@ -1,5 +1,6 @@
 package com.example.collegebookapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -56,18 +58,20 @@ public class Authenticate extends AppCompatActivity implements View.OnClickListe
         }
 
         // if reached this point, both email and password are not empty
-        firebaseAuth.createUserWithEmailAndPassword(email, password);
-//                .addOnCompleteListener(this, new onCompleteListener<AuthResult>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<AuthResult> task) {
-//                        if (task.isSuccessful()) {
-//                            Toast.makeText(Authenticate.this, "Registration successful.", Toast.LENGTH_SHORT).show();
-//                        }
-//                        else {
-//                            Toast.makeText(Authenticate.this, "Could not register. Please try again.", Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//                });
+        firebaseAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(Authenticate.this, "Registration successful.", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                            finish();
+                        }
+                        else {
+                            Toast.makeText(Authenticate.this, "Could not register. Please try again.", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 
 
